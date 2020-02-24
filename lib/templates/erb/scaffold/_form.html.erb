@@ -5,6 +5,7 @@
   <div class="form-inputs">
   <%- attributes.each do |attribute| -%>
     <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> %>
+  <%= f.input :photo, as: :file %>
   <%- end -%>
   </div>
 
